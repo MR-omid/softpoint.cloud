@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#061943">
+<meta name="description" content="AMP  Adaptive Media Platform. Intelligent infrastructure for live media.">
+<title>AMP  Adaptive Media Platform</title>
+<style>
+:root{--navy:#061943;--navy2:#092b68;--blue:#0878ed;--cyan:#08b9ef;--ink:#10234a;--muted:#64748b;--paper:#f7f9ff;--line:#e4ebf7}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:#fff}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 48px));margin:auto}
+header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(228,235,247,.8);background:rgba(255,255,255,.88);backdrop-filter:blur(16px);position:sticky;top:0;z-index:10}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.12em;color:var(--navy)}.brand-mark{width:34px;height:34px;border-radius:11px;background:linear-gradient(140deg,var(--cyan),var(--blue) 55%,var(--navy));display:grid;place-items:center;color:#fff;font-size:18px;box-shadow:0 7px 18px #0878ed35}.brand small{display:block;font-size:9px;letter-spacing:.16em;color:#7b8aa8;font-weight:700;margin-top:2px}
+nav{display:flex;align-items:center;gap:30px;font-size:13px;font-weight:650;color:#50617f}nav a:hover{color:var(--blue)}.nav-cta{padding:11px 18px;border-radius:99px;background:var(--navy);color:#fff}
+.hero{position:relative;overflow:hidden;padding:72px 0 86px;background:radial-gradient(ellipse at 80% 15%,#dff4ff 0,transparent 34%),linear-gradient(180deg,#fff 0%,#f7faff 100%)}
+.hero:before{content:"";position:absolute;width:540px;height:540px;border:1px solid #cfe7ff;border-radius:50%;right:-180px;top:-220px;box-shadow:0 0 0 45px #eaf5ff80,0 0 0 90px #eff7ff80}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:42px;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--blue);font-size:11px;letter-spacing:.2em;font-weight:800;text-transform:uppercase}.eyebrow:before{content:"";width:26px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue))}
+h1{font-size:clamp(42px,5.3vw,68px);line-height:1.04;letter-spacing:-.055em;color:var(--navy);margin:22px 0 20px;max-width:650px}h1 span{background:linear-gradient(90deg,var(--blue),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:17px;line-height:1.8;color:#61708b;max-width:560px}.fa{font-family:Tahoma,Arial,sans-serif;direction:rtl;unicode-bidi:plaintext;color:#8794aa;font-size:13px;line-height:1.9;display:block;margin-top:9px}
+.actions{display:flex;gap:13px;align-items:center;margin-top:30px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 21px;border-radius:10px;font-weight:750;font-size:13px;transition:.2s}.primary{color:#fff;background:linear-gradient(110deg,var(--blue),#0754c9);box-shadow:0 12px 25px #0878ed35}.primary:hover{transform:translateY(-2px);box-shadow:0 16px 30px #0878ed45}.secondary{border:1px solid #d8e3f4;color:var(--navy);background:#fff}.hero-art{position:relative;display:grid;place-items:center;min-height:340px}.logo-card{width:min(100%,520px);padding:22px;background:#fff;border:1px solid #e5edf9;border-radius:25px;box-shadow:0 28px 70px #092b6819;transform:rotate(1deg)}.logo-card img{display:block;width:100%;height:auto}.float-chip{position:absolute;bottom:8px;left:-5px;padding:13px 17px;border-radius:13px;background:var(--navy);color:white;box-shadow:0 15px 35px #06194330;font-size:12px;font-weight:700}.float-chip b{color:#43caff}
+.metrics{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}.metric-row{display:grid;grid-template-columns:repeat(3,1fr);padding:23px 0}.metric{padding:4px 25px;border-right:1px solid var(--line)}.metric:first-child{padding-left:0}.metric:last-child{border:0}.metric strong{display:block;font-size:14px;color:var(--navy)}.metric span{font-size:11px;color:#8a98b1;display:block;margin-top:5px}
+section{padding:88px 0}.section-head{text-align:center;max-width:690px;margin:0 auto 44px}.kicker{font-size:11px;font-weight:800;letter-spacing:.2em;color:var(--blue);text-transform:uppercase}.section-head h2{font-size:clamp(30px,4vw,43px);letter-spacing:-.04em;color:var(--navy);margin:13px 0}.section-head p{color:var(--muted);line-height:1.8;margin:0}.section-head .fa{margin-top:5px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:28px;border:1px solid var(--line);border-radius:17px;background:#fff;transition:.22s}.card:hover{transform:translateY(-5px);box-shadow:0 20px 45px #092b6810;border-color:#c6defb}.icon{width:44px;height:44px;border-radius:13px;background:linear-gradient(140deg,#e7f8ff,#eaf0ff);display:grid;place-items:center;color:var(--blue);font-size:20px;margin-bottom:22px}.card h3{margin:0 0 10px;color:var(--navy);font-size:17px}.card p{margin:0;color:var(--muted);font-size:13px;line-height:1.8}.card .fa{font-size:11px;color:#8794aa}
+.arch{background:linear-gradient(180deg,#f7faff,#fff)}.arch-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;align-items:stretch}.arch-item{background:#fff;border:1px solid var(--line);border-radius:15px;padding:22px 18px;position:relative}.arch-item:not(:last-child):after{content:"";position:absolute;right:-13px;top:42%;z-index:2;background:#f2f7ff;color:var(--blue);width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-weight:800}.step{font-size:10px;letter-spacing:.14em;color:var(--blue);font-weight:800}.arch-item h3{font-size:15px;color:var(--navy);margin:13px 0 8px}.arch-item p{font-size:12px;line-height:1.7;color:var(--muted);margin:0}
+.callout{padding:0 0 88px}.callout-inner{border-radius:24px;padding:48px;background:radial-gradient(circle at 90% 0,#0c55b7 0,transparent 35%),linear-gradient(120deg,#061943,#092b68);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:30px;overflow:hidden;position:relative}.callout h2{font-size:clamp(26px,3vw,38px);letter-spacing:-.04em;margin:0 0 10px}.callout p{color:#c1d1ed;margin:0;line-height:1.7;font-size:14px}.callout .fa{color:#a9c1e8}.callout .btn{background:#fff;color:var(--navy);white-space:nowrap}
+footer{background:#06132f;color:#a8b7d2;padding:30px 0}.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:11px}.foot strong{color:#fff;letter-spacing:.12em}.foot .tag{color:#6f87ad}
+@media(max-width:850px){nav{gap:16px}.hero-grid{grid-template-columns:1fr}.hero-art{min-height:270px}.logo-card{max-width:470px}.cards{grid-template-columns:repeat(2,1fr)}.arch-grid{grid-template-columns:repeat(2,1fr)}.arch-item:nth-child(2):after{display:none}}
+@media(max-width:600px){.wrap{width:min(100% - 32px,1160px)}header{height:70px}nav a:not(.nav-cta){display:none}.hero{padding:52px 0 60px}.hero-grid{gap:24px}h1{font-size:43px}.lead{font-size:15px}.hero-art{min-height:220px}.logo-card{padding:12px;border-radius:17px}.float-chip{left:0;bottom:-8px}.metric-row{grid-template-columns:1fr;gap:15px}.metric,.metric:first-child{padding:0;border:0}.metric span{margin-top:2px}section{padding:65px 0}.cards,.arch-grid{grid-template-columns:1fr}.arch-item:after{display:none!important}.callout{padding-bottom:60px}.callout-inner{padding:30px 24px;display:block}.callout .btn{margin-top:22px}.foot{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap" style="display:flex;align-items:center;justify-content:space-between">
+    <a class="brand" href="#top"><span class="brand-mark">A</span><span>AMP<small>ADAPTIVE MEDIA PLATFORM</small></span></a>
+    <nav><a href="#platform">Platform</a><a href="#architecture">Architecture</a><a href="#vision">Our vision</a><a class="nav-cta" href="mailto:hello@amp.dev">Get in touch </a></nav>
+  </div>
+</header>
+<main id="top">
+<section class="hero">
+ <div class="wrap hero-grid">
+  <div>
+   <div class="eyebrow">Intelligent infrastructure for live media</div>
+   <h1>Live media.<br><span>Smarter by design.</span></h1>
+   <p class="lead">A flexible foundation for building, orchestrating, and delivering interactive live experiences  from real-time communication to adaptive streaming.</p>
+   <span class="fa">                .</span>
+   <div class="actions"><a class="btn primary" href="#platform">Explore the platform <span></span></a><a class="btn secondary" href="mailto:hello@amp.dev">Contact the team</a></div>
+  </div>
+  <div class="hero-art">
+   <div class="logo-card"><img alt="AMP  Adaptive Media Platform logo" src="logo.png"></div>
+   <div class="float-chip"><b>AMP</b> &nbsp; Built for live experiences</div>
+  </div>
+ </div>
+</section>
+<div class="metrics"><div class="wrap metric-row">
+ <div class="metric"><strong>Real-time interaction</strong><span>WebRTC-powered communication</span></div>
+ <div class="metric"><strong>Adaptive delivery</strong><span>HLS-based viewer experiences</span></div>
+ <div class="metric"><strong>Central orchestration</strong><span>One control plane, distributed media</span></div>
+</div></div>
+<section id="platform">
+ <div class="wrap">
+  <div class="section-head"><div class="kicker">The platform</div><h2>One platform. Multiple possibilities.</h2><p>AMP brings the key building blocks of live media infrastructure into one coordinated platform.</p><span class="fa">AMP               .</span></div>
+  <div class="cards">
+   <article class="card"><div class="icon"></div><h3>Real-time communication</h3><p>Enable interactive sessions with WebRTC and a scalable media-server layer.</p><span class="fa">       WebRTC    .</span></article>
+   <article class="card"><div class="icon"></div><h3>Adaptive streaming</h3><p>Extend live sessions to larger audiences through composed HLS streams.</p><span class="fa">         HLS.</span></article>
+   <article class="card"><div class="icon"></div><h3>Intelligent orchestration</h3><p>Coordinate rooms, media resources, and workloads from a central control plane.</p><span class="fa">          .</span></article>
+   <article class="card"><div class="icon"></div><h3>Infrastructure visibility</h3><p>Bring server health and resource telemetry into a unified operational view.</p><span class="fa">        .</span></article>
+   <article class="card"><div class="icon"></div><h3>Media composition</h3><p>Prepare composed outputs for distribution and downstream delivery workflows.</p><span class="fa">       .</span></article>
+   <article class="card"><div class="icon"></div><h3>Modular by nature</h3><p>Start with the essentials and evolve toward a distributed media infrastructure.</p><span class="fa">         .</span></article>
+  </div>
+ </div>
+</section>
+<section class="arch" id="architecture">
+ <div class="wrap">
+  <div class="section-head"><div class="kicker">How it fits together</div><h2>Designed as a coordinated system.</h2><p>A clear separation of responsibilities helps each layer do one job  and do it well.</p><span class="fa">              .</span></div>
+  <div class="arch-grid">
+   <div class="arch-item"><div class="step">01 / CONTROL</div><h3>Central API</h3><p>Rooms, routing, resource decisions, and orchestration.</p></div>
+   <div class="arch-item"><div class="step">02 / OBSERVE</div><h3>Server Agent</h3><p>Lightweight telemetry and health reporting from each node.</p></div>
+   <div class="arch-item"><div class="step">03 / INTERACT</div><h3>Media Server</h3><p>Real-time WebRTC sessions and interactive participants.</p></div>
+   <div class="arch-item"><div class="step">04 / DELIVER</div><h3>Composer & Storage</h3><p>Composed HLS output, object storage, and delivery integration.</p></div>
+  </div>
+ </div>
+</section>
+<section class="callout" id="vision"><div class="wrap"><div class="callout-inner">
+ <div><h2>Build whats next in live media.</h2><p>AMP is being shaped as a practical, modular foundation for modern live experiences.<br>Lets create more connected ways to communicate and share.</p><span class="fa">          .</span></div>
+ <a class="btn" href="mailto:hello@amp.dev">Start a conversation </a>
+</div></div></section>
+</main>
+<footer><div class="wrap foot"><div><strong>AMP</strong> <span class="tag"> Adaptive Media Platform</span></div><div>Intelligent Infrastructure for Live Media</div><div> <span id="year">2026</span> AMP. All rights reserved.</div></div></footer>
+</body></html>
